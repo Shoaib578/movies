@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Movie</title>
+    link(href='style.css' rel='stylesheet')
+  </head>
+  <body>
+    <form method="POST" action="/edit_movie">
+      <h1>Edit Movie</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        if showToast
+          <div class="alert alert-primary" style="background-color:skyblue;padding:5px;border-radius:5px;" role="alert">
+            <p>#{toast}</p>
+            
+          </div>
+
+      <br />
+        <input type="hidden" hidden value="#{id}" name="movie_id"/>
+        
+        <input type="text" placeholder="Enter Title" value="#{data.title}" name="title" required>
+        <input type="text" placeholder="Genre" value="#{data.genre}" name="genre" required>
+
+        <input type="number" value="#{data.rating}"  step='0.01'  placeholder="Enter Rating" name="rating" required>
+
+        <b>description</b>
+        <p> #{data.description}</p>
+         <textarea type="text" placeholder="Enter Description" name="description" required>
+        
+        </textarea>
+
+      </div>
+      <button type="submit">Update</button>
+
+       <center>
+
+      <a href="/home" >Go Back to home page</a>
+      </center>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Movie</title>
+    link(href='style.css' rel='stylesheet')
+  </head>
+  <body>
+    <form method="POST" action="/add_movie">
+      <h1>Add Movie</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        if showToast
+          <div class="alert alert-primary" style="background-color:skyblue;padding:5px;border-radius:5px;" role="alert">
+            <p>#{toast}</p>
+            
+          </div>
+
+      <br />
+        <label for="title"><strong>Title</strong></label>
+        <input type="text" placeholder="Enter Title" name="title" required>
+        <input type="text" placeholder="Genre" name="genre" required>
+
+        <input type="number"  step='0.01'  placeholder="Enter Rating" name="rating" required>
+
+        <label for="description"><strong>Description</strong></label>
+        <textarea type="text" placeholder="Enter Description" name="description" required>
+        </textarea>
+
+      </div>
+      <button type="submit">Add</button>
+
+       <center>
+
+      <a href="/home" >Go Back to home page</a>
+      </center>
+    </form>
+  </body>
+</html>
